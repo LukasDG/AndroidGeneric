@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Integratieproject</string>
+    <string name="txtProjectName">ProjectName</string>
+    <string name="txtLikes">502</string>
+    <string name="txtComments">183</string>
+    <string name="txtShares">16</string>
 </resources>
+
