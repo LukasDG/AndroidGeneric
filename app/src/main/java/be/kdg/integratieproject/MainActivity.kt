@@ -1,68 +1,60 @@
 package be.kdg.integratieproject
 
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.view.MenuItem
-import android.view.View
-import be.kdg.integratieproject.adapters.ProjectsAdapter
-import be.kdg.integratieproject.model.project.Project
-import be.kdg.integratieproject.rest.getRetrofit
-import be.kdg.integratieproject.services.initMenuListener
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
-import java.util.*
+import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 
 const val PROJECT_ID: String = "PROJECT_ID"
 
-class MainActivity : AppCompatActivity(), ProjectsAdapter.Listener {
-    private lateinit var rvProjects: RecyclerView
+class MainActivity : AppCompatActivity(){
     private lateinit var navMenu: BottomNavigationView
-    private var myCompositeDisposable: CompositeDisposable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        myCompositeDisposable = CompositeDisposable()
         initialiseViews()
-        loadData()
     }
 
     private fun initialiseViews(){
-        rvProjects = findViewById(R.id.rvProjects)
         navMenu = findViewById(R.id.bottom_navigation)
         navMenu.setOnNavigationItemSelectedListener(initMenuListener(this))
-        rvProjects.layoutManager = LinearLayoutManager(this)
+        val homeFragment = HomeFragment.newInstance()
+        openFragment(homeFragment)
     }
 
-    private fun loadData(){
-        val retrofit = getRetrofit()
-        myCompositeDisposable?.add(retrofit.getProjects()
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribeOn(Schedulers.io())
-            .subscribe(this::handleResponse))
-    }
-
-    private fun handleResponse(myData: List<Project>){
-        val myDataArrayList = ArrayList(myData)
-        myDataArrayList.forEach {
-
+    private fun initMenuListener(context: Context): BottomNavigationView.OnNavigationItemSelectedListener{
+        return BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId){
+                R.id.action_home -> {
+                    val homeFragment = HomeFragment.newInstance()
+                    openFragment(homeFragment)
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.action_search -> {
+                    val intent = Intent(context, SearchActivity::class.java)
+                    ContextCompat.startActivity(context, intent, null)
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.action_profile -> {
+                    val intent = Intent(context, ProfileActivity::class.java)
+                    ContextCompat.startActivity(context, intent, null)
+                    return@OnNavigationItemSelectedListener true
+                }
+                else -> {
+                    return@OnNavigationItemSelectedListener false
+                }
+            }
         }
-        rvProjects.adapter = ProjectsAdapter(myDataArrayList, this)
     }
 
-    override fun onProjectSelected(projectId: Int){
-        val intent = Intent(this, ProjectActivity::class.java)
-        intent.putExtra(PROJECT_ID, projectId+1)
-        startActivity(intent)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        myCompositeDisposable?.clear()
+    fun openFragment(fragment: Fragment){
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_container, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }
