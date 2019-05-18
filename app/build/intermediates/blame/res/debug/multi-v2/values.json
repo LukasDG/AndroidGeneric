@@ -1,8 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\lukas\\Documents\\Cursussen 2018-2019\\Integratieproject\\Android\\AndroidRepository\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\lukas\\Documents\\GitHub\\AndroidV2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\lukas\\Documents\\GitHub\\AndroidV2\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "376"
+                    },
+                    "to": {
+                        "startLines": "396",
+                        "startColumns": "4",
+                        "startOffsets": "23787",
+                        "endLines": "401",
+                        "endColumns": "12",
+                        "endOffsets": "24101"
+                    }
+                },
                 {
                     "source": "C:\\Users\\lukas\\.gradle\\caches\\transforms-1\\files-1.1\\recyclerview-v7-28.0.0.aar\\d34bba97c3bea23013ec99f82456af9d\\res\\values\\values.xml",
                     "from": {
@@ -42,6 +61,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\lukas\\Documents\\GitHub\\AndroidV2\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1,4,3,2,5",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "17,171,129,73,216",
+                        "endColumns": "54,43,40,54,40",
+                        "endOffsets": "67,210,165,123,252"
+                    },
+                    "to": {
+                        "startLines": "384,387,388,389,390",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "22985,23164,23208,23249,23304",
+                        "endColumns": "54,43,40,54,40",
+                        "endOffsets": "23035,23203,23244,23299,23340"
+                    }
+                },
+                {
                     "source": "C:\\Users\\lukas\\.gradle\\caches\\transforms-1\\files-1.1\\coordinatorlayout-28.0.0.aar\\ad7d5ac2e8d67542ce072e5725b13e08\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,102,3,13",
@@ -61,43 +97,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\lukas\\Documents\\Cursussen 2018-2019\\Integratieproject\\Android\\AndroidRepository\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1,4,3,2,5",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "17,171,129,73,216",
-                        "endColumns": "54,43,40,54,40",
-                        "endOffsets": "67,210,165,123,252"
-                    },
-                    "to": {
-                        "startLines": "384,387,388,389,390",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "22985,23164,23208,23249,23304",
-                        "endColumns": "54,43,40,54,40",
-                        "endOffsets": "23035,23203,23244,23299,23340"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lukas\\Documents\\Cursussen 2018-2019\\Integratieproject\\Android\\AndroidRepository\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "376"
-                    },
-                    "to": {
-                        "startLines": "396",
-                        "startColumns": "4",
-                        "startOffsets": "23787",
-                        "endLines": "401",
-                        "endColumns": "12",
-                        "endOffsets": "24101"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lukas\\Documents\\Cursussen 2018-2019\\Integratieproject\\Android\\AndroidRepository\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\lukas\\Documents\\GitHub\\AndroidV2\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",
