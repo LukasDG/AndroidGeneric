@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Integratieproject</string>
+    <string name="txtProjectName">Project name</string>
+    <string name="txtLikes">502</string>
+    <string name="txtComments">183</string>
+    <string name="txtShares">16</string>
+    <string name="txtDescription">Description</string>
+    <string name="txtHome">Home</string>
+    <string name="txtSearch">Search</string>
+    <string name="txtProfile">Profile</string>
+    <string name="txtProgress">Progress:</string>
+    <string name="txtIdeations">Ideations:</string>
+    <string name="txtQuestionnaires">Questionnaires:</string>
+    <string name="txtStartDate">StartDate</string>
+    <string name="txtEndDate">EndDate</string>
+</resources>
+

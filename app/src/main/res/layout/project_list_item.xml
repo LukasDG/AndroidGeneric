@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:layout_marginBottom="0dp"
+                                             android:layout_marginTop="10dp"
+                                             android:background="#ffffff"
+                                             android:paddingBottom="10dp"
+>
+    <ImageView
+            android:scaleType="fitXY"
+            android:layout_height="140dp"
+            android:layout_width="match_parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic[2]"
+            android:id="@+id/ivProjectImage"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="0dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="@string/txtProjectName"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvProjectName" android:layout_marginTop="12dp" android:layout_marginBottom="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/ivProjectImage" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+    <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp" app:srcCompat="@drawable/heart_symbol"
+            android:id="@+id/ivLikes" android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvProjectName" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="@string/txtLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:id="@+id/tvLikes"
+            app:layout_constraintStart_toEndOf="@+id/ivLikes" android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp" app:layout_constraintTop_toTopOf="@+id/ivLikes"/>
+    <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp" app:srcCompat="@drawable/idiation_icon"
+            android:id="@+id/ivComments"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/tvProjectName"
+            app:layout_constraintEnd_toStartOf="@+id/guidMiddle" android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="@string/txtComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:id="@+id/tvIdeations"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/ivComments"
+            app:layout_constraintStart_toStartOf="@+id/guidMiddle" android:layout_marginStart="8dp"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guidMiddle" app:layout_constraintGuide_percent="0.5"
+                                          android:orientation="vertical"/>
+    <TextView
+            android:text="@string/txtShares"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvShares" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/ivShare"
+            android:textColor="#000000"/>
+    <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp" app:srcCompat="@drawable/share"
+            android:id="@+id/ivShare" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvProjectName" app:layout_constraintEnd_toStartOf="@+id/tvShares"
+            android:layout_marginEnd="8dp"/>
+</android.support.constraint.ConstraintLayout>
