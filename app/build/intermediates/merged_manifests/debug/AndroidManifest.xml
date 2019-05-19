@@ -33,11 +33,6 @@
             </intent-filter>
         </activity>
         <activity android:name="be.kdg.integratieproject.ProjectActivity" />
-
-        <provider
-            android:name="com.android.tools.ir.server.InstantRunContentProvider"
-            android:authorities="be.kdg.integratieproject.com.android.tools.ir.server.InstantRunContentProvider"
-            android:multiprocess="true" />
     </application>
 
 </manifest>

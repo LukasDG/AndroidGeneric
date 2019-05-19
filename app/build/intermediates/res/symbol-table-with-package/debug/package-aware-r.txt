@@ -1129,7 +1129,6 @@ id icon
 id icon_group
 id ifRoom
 id image
-id imageView
 id info
 id invisible
 id italic
@@ -1311,9 +1310,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
-layout activity_profile
 layout activity_project
-layout activity_search
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1329,6 +1326,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_home
+layout fragment_profile
+layout fragment_project
+layout fragment_search
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action

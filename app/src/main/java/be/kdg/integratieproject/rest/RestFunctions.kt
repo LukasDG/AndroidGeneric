@@ -13,13 +13,12 @@ const val BASE_URL = "https://10.0.2.2:5001/"
 fun getRetrofit(): DataService{
     val okHttpClient = getOkHttpClient().newBuilder().build()
 
-    val retrofit = Retrofit.Builder()
+    return Retrofit.Builder()
         .client(okHttpClient)
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .build().create(DataService::class.java)
-    return retrofit
 }
 
 fun getOkHttpClient(): OkHttpClient {
