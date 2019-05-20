@@ -13,8 +13,29 @@
     <string name="txtQuestionnaires">Questionnaires:</string>
     <string name="txtStartDate">StartDate</string>
     <string name="txtEndDate">EndDate</string>
+    <string name="txtEmailInput">Email:</string>
+    <string name="txtPasswordInput">Password:</string>
+    <string name="txtLoginTitle">Login with your credentials</string>
+    <string name="txtLogin">Login</string>
+    <string name="txtRegister">Register</string>
+    <string name="txtFirstName">First name:</string>
+    <string name="txtLastName">Last name:</string>
+    <string name="txtAge">Age:</string>
+    <string name="txtPostalCode">¨Postal code:</string>
+    <string name="txtPlace">Place:</string>
+    <string name="txtSex">Sex:</string>
+    <string name="txtNoAccountYet"><u>No account yet?</u></string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="GenderM">M</string>
+    <string name="GenderF">F</string>
+    <string name="GenderX">X</string>
+
+    <string-array name="GenderList">
+        <item>@string/GenderM</item>
+        <item>@string/GenderF</item>
+        <item>@string/GenderX</item>
+    </string-array>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
 

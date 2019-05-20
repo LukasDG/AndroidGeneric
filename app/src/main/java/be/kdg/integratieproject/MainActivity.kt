@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.widget.FrameLayout
 import be.kdg.integratieproject.fragments.HomeFragment
+import be.kdg.integratieproject.fragments.LoginFragment
 import be.kdg.integratieproject.fragments.ProfileFragment
 import be.kdg.integratieproject.fragments.SearchFragment
 
@@ -46,8 +47,8 @@ class MainActivity : AppCompatActivity(){
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_profile -> {
-                    val profileFragment = ProfileFragment.newInstance()
-                    openFragment(profileFragment)
+                    val loginFragment = LoginFragment.newInstance()
+                    openFragment(loginFragment)
                     return@OnNavigationItemSelectedListener true
                 }
                 else -> {
