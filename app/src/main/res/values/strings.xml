@@ -9,8 +9,8 @@
     <string name="txtSearch">Search</string>
     <string name="txtProfile">Profile</string>
     <string name="txtProgress">Progress:</string>
-    <string name="txtIdeations">Ideations:</string>
-    <string name="txtQuestionnaires">Questionnaires:</string>
+    <string name="txtIdeations">Ideations</string>
+    <string name="txtQuestionnaires">Questionnaires</string>
     <string name="txtStartDate">StartDate</string>
     <string name="txtEndDate">EndDate</string>
     <string name="txtEmailInput">Email:</string>
@@ -24,7 +24,15 @@
     <string name="txtPostalCode">¨Postal code:</string>
     <string name="txtPlace">Place:</string>
     <string name="txtSex">Sex:</string>
-    <string name="txtNoAccountYet"><u>No account yet?</u></string>
+    <string name="txtNoAccountYet">
+        <u>No account yet?</u>
+    </string>
+    <string name="txtQuestionnaireName">Questionnaire name</string>
+    <string name="txtFillIn">
+        <u>Fill in</u>
+    </string>
+    <string name="txtQuestions">Questions</string>
+    <string name="txtIdeas">Ideas</string>
 
     <string name="GenderM">M</string>
     <string name="GenderF">F</string>

@@ -1,4 +1,1 @@
-#Sat May 18 23:53:53 CEST 2019
-base.0=C\:\\Users\\lukas\\Documents\\GitHub\\AndroidV2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
-path.0=classes.dex
-renamed.0=classes.dex
+#Mon May 20 16:39:13 CEST 2019

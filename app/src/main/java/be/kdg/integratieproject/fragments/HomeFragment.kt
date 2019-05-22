@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import be.kdg.integratieproject.R
 import be.kdg.integratieproject.adapters.ProjectsAdapter
 import be.kdg.integratieproject.model.project.Project
+import be.kdg.integratieproject.model.project.ProjectBasic
 import be.kdg.integratieproject.rest.getRetrofit
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -37,20 +38,19 @@ class HomeFragment : Fragment(), ProjectsAdapter.Listener{
 
     private fun initViews(view: View){
         rvProjects = view.rvProjects
-        rvProjects.layoutManager = LinearLayoutManager(this.context)
     }
 
     private fun loadData(){
-        val retrofit = getRetrofit()
-        retrofit.getProjects()
+        getRetrofit().getProjects()
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .subscribe(this::handleResponse)
     }
 
-    private fun handleResponse(myData: List<Project>){
+    private fun handleResponse(myData: List<ProjectBasic>){
         val myDataArrayList = ArrayList(myData)
         rvProjects.adapter = ProjectsAdapter(myDataArrayList, this)
+        rvProjects.layoutManager = LinearLayoutManager(this.context)
     }
 
     override fun onProjectSelected(projectId: Int) {

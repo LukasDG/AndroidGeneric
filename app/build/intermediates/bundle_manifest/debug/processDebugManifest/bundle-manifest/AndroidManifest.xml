@@ -33,6 +33,11 @@
             </intent-filter>
         </activity>
         <activity android:name="be.kdg.integratieproject.ProjectActivity" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="be.kdg.integratieproject.com.squareup.picasso"
+            android:exported="false" />
     </application>
 
 </manifest>

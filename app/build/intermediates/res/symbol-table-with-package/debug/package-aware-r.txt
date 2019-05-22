@@ -1008,6 +1008,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable forward_icon
 drawable heart_symbol
 drawable home_icon
 drawable ic_launcher_background
@@ -1077,7 +1078,9 @@ id beginning
 id blocking
 id bottom
 id bottom_navigation
+id btnIdeations
 id btnLogin
+id btnQuestionnaires
 id btnReg
 id buttonPanel
 id cancel_action
@@ -1127,6 +1130,7 @@ id gone
 id group_divider
 id groups
 id guidMiddle
+id guideline
 id home
 id homeAsUp
 id icon
@@ -1147,6 +1151,7 @@ id invisible
 id italic
 id item_touch_helper_previous_elevation
 id ivComments
+id ivFillInImage
 id ivLikes
 id ivProjectImage
 id ivShare
@@ -1188,6 +1193,7 @@ id right
 id right_icon
 id right_side
 id rvProjects
+id rvQuestionaires
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1266,6 +1272,8 @@ id transition_transform
 id tvAge
 id tvEmail
 id tvEmailReg
+id tvEndDate
+id tvFillIn
 id tvFirstNameReg
 id tvIdeations
 id tvLastNameReg
@@ -1278,8 +1286,11 @@ id tvPostalCode
 id tvProjectDescription
 id tvProjectName
 id tvProjectTitle
+id tvQuestionnaireName
 id tvSex
 id tvShares
+id tvStartdate
+id tvTitleProgress
 id uniform
 id unlabeled
 id up
@@ -1357,6 +1368,8 @@ layout fragment_home
 layout fragment_login
 layout fragment_profile
 layout fragment_project
+layout fragment_questionnaire
+layout fragment_questionnaires
 layout fragment_register
 layout fragment_search
 layout mtrl_layout_snackbar
@@ -1377,6 +1390,7 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout project_list_item
+layout questionnaire_list_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -1448,8 +1462,10 @@ string txtComments
 string txtDescription
 string txtEmailInput
 string txtEndDate
+string txtFillIn
 string txtFirstName
 string txtHome
+string txtIdeas
 string txtIdeations
 string txtLastName
 string txtLikes
@@ -1462,7 +1478,9 @@ string txtPostalCode
 string txtProfile
 string txtProgress
 string txtProjectName
+string txtQuestionnaireName
 string txtQuestionnaires
+string txtQuestions
 string txtRegister
 string txtSearch
 string txtSex
