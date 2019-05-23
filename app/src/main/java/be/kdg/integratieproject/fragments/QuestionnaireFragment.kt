@@ -7,10 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
 
 import be.kdg.integratieproject.R
 import be.kdg.integratieproject.adapters.ProjectsAdapter
@@ -109,11 +106,14 @@ class QuestionnaireFragment : Fragment() {
                 var answer = ""
                 when {
                     questions[x].questionType == 0 || questions[x].questionType == 4 -> {
-                        val question = view.findViewById<EditText>(questions[x].id)
-                        answer = question.text.toString()
+                        val editText = view.findViewById<EditText>(questions[x].id)
+                        answer = editText.text.toString()
                     }
                     questions[x].questionType == 1 -> {
-
+                        val radioGroup = view.findViewById<RadioGroup>(questions[x].id)
+                        val selectedButtonId = radioGroup.checkedRadioButtonId
+                        val radioButton = view.findViewById<RadioButton>(selectedButtonId)
+                        answer = radioButton.text.toString()
                     }
                     questions[x].questionType == 2 -> {
 

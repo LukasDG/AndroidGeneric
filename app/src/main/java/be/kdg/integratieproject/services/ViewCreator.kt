@@ -28,6 +28,7 @@ fun getCheckBoxes(context: Context, options: ArrayList<String>): View {
     for (option in options){
         val cb = CheckBox(context)
         cb.text = option
+        cb.id = option.toInt()
         layout.addView(cb)
     }
     return layout
