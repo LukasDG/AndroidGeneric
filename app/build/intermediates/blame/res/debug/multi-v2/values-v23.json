@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Lukas\\Documents\\GitHub\\AndroidIntegratieProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\lukas\\Documents\\GitHub\\AndroidV2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lukas\\.gradle\\caches\\transforms-2\\files-2.1\\4f78efeb2528dd368efbc1a9258bbe77\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\lukas\\.gradle\\caches\\transforms-2\\files-2.1\\78a1c206c462f4887710cf0a24b80598\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lukas\\.gradle\\caches\\transforms-2\\files-2.1\\e387f52be8de891de22d5609f8195296\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\lukas\\.gradle\\caches\\transforms-2\\files-2.1\\ed4cf23ae12534367347f42d9acf03cb\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

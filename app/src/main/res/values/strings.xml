@@ -24,6 +24,8 @@
     <string name="txtPostalCode">¨Postal code:</string>
     <string name="txtPlace">Place:</string>
     <string name="txtSex">Sex:</string>
+    <string name="txtTitleQuestion">Question title</string>
+    <string name="txtSubmit">Submit</string>
     <string name="txtNoAccountYet">
         <u>No account yet?</u>
     </string>

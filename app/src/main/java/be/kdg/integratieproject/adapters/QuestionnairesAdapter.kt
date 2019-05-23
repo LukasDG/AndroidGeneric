@@ -10,7 +10,6 @@ import be.kdg.integratieproject.model.project.Questionnaire
 import kotlinx.android.synthetic.main.questionnaire_list_item.view.*
 
 class QuestionnairesAdapter(
-    private val questionnairesList: ArrayList<Questionnaire>,
     private val listener: Listener
 ) : RecyclerView.Adapter<QuestionnairesAdapter.QuestionnaireViewHolder>(){
 
@@ -19,6 +18,12 @@ class QuestionnairesAdapter(
         val tvFillIn = view.tvFillIn
         val ivFillInImage = view.ivFillInImage
     }
+
+    var questionnairesList: ArrayList<Questionnaire> = arrayListOf()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewId: Int): QuestionnaireViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.questionnaire_list_item, parent, false)

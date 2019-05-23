@@ -38,19 +38,17 @@ class HomeFragment : Fragment(), ProjectsAdapter.Listener{
 
     private fun initViews(view: View){
         rvProjects = view.rvProjects
+        rvProjects.adapter = ProjectsAdapter(this)
+        rvProjects.layoutManager = LinearLayoutManager(this.context)
     }
 
     private fun loadData(){
         getRetrofit().getProjects()
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
-            .subscribe(this::handleResponse)
-    }
-
-    private fun handleResponse(myData: List<ProjectBasic>){
-        val myDataArrayList = ArrayList(myData)
-        rvProjects.adapter = ProjectsAdapter(myDataArrayList, this)
-        rvProjects.layoutManager = LinearLayoutManager(this.context)
+            .subscribe({
+                (rvProjects.adapter as ProjectsAdapter).projectList = ArrayList(it)
+            })
     }
 
     override fun onProjectSelected(projectId: Int) {

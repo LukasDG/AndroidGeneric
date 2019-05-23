@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Lukas\\Documents\\GitHub\\AndroidIntegratieProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
+            "outputFile": "C:\\Users\\lukas\\Documents\\GitHub\\AndroidV2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lukas\\.gradle\\caches\\transforms-2\\files-2.1\\4f78efeb2528dd368efbc1a9258bbe77\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\lukas\\.gradle\\caches\\transforms-2\\files-2.1\\78a1c206c462f4887710cf0a24b80598\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lukas\\.gradle\\caches\\transforms-2\\files-2.1\\a5356a45983aa4a53e52f8478b00b258\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\lukas\\.gradle\\caches\\transforms-2\\files-2.1\\25459d5873922feb2cf249e5cd85aa75\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Lukas\\Documents\\GitHub\\AndroidIntegratieProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "outputFile": "C:\\Users\\lukas\\Documents\\GitHub\\AndroidV2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lukas\\.gradle\\caches\\transforms-2\\files-2.1\\052eec7e42ef8ec64769c94d31b30f9f\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\lukas\\.gradle\\caches\\transforms-2\\files-2.1\\62dd2a2d00dcce54c3fe3325a0c04244\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lukas\\.gradle\\caches\\transforms-2\\files-2.1\\4f78efeb2528dd368efbc1a9258bbe77\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\lukas\\.gradle\\caches\\transforms-2\\files-2.1\\78a1c206c462f4887710cf0a24b80598\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

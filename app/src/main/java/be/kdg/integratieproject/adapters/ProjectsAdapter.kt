@@ -14,7 +14,6 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.project_list_item.view.*
 
 class ProjectsAdapter(
-    private val projectList: ArrayList<ProjectBasic>,
     private val listener: Listener
 ) : RecyclerView.Adapter<ProjectsAdapter.ProjectViewHolder>(){
     class ProjectViewHolder(view: View) : RecyclerView.ViewHolder(view){
@@ -23,6 +22,12 @@ class ProjectsAdapter(
         val tvProjectLikes = view.tvLikes
         val tvProjectIdeations = view.tvIdeations
     }
+
+    var projectList: ArrayList<ProjectBasic> = arrayListOf()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewId: Int): ProjectViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.project_list_item, parent, false)
@@ -36,7 +41,7 @@ class ProjectsAdapter(
         projectViewHolder.tvProjectName.text = currentProject.name
         projectViewHolder.tvProjectLikes.text = currentProject.numberOfLikes.toString()
         projectViewHolder.tvProjectIdeations.text = currentProject.numberOfIdeations.toString()
-        Picasso.get().load("https://localhost:5001/api/ProjectImage/1").into(projectViewHolder.ivProjectImage)
+        //Picasso.get().load("https://localhost:5001/api/ProjectImage/1").into(projectViewHolder.ivProjectImage)
         //projectViewHolder.ivProjectImage.setImageBitmap(currentProject.projectImage)
         //projectViewHolder.ivProjectImage.setImageResource(R.drawable.nature)
         projectViewHolder.ivProjectImage.setOnClickListener {

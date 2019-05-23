@@ -1082,12 +1082,15 @@ id btnIdeations
 id btnLogin
 id btnQuestionnaires
 id btnReg
+id button
 id buttonPanel
 id cancel_action
 id center
 id center_horizontal
 id center_vertical
 id chains
+id checkBox
+id checkBox2
 id checkbox
 id chronometer
 id clip_horizontal
@@ -1110,6 +1113,7 @@ id dimensions
 id direct
 id disableHome
 id editText
+id editText3
 id edit_query
 id end
 id end_padder
@@ -1162,6 +1166,7 @@ id line1
 id line3
 id listMode
 id list_item
+id llQuestionnaire
 id masked
 id media_actions
 id message
@@ -1286,6 +1291,7 @@ id tvPostalCode
 id tvProjectDescription
 id tvProjectName
 id tvProjectTitle
+id tvQuestionTitle
 id tvQuestionnaireName
 id tvSex
 id tvShares
@@ -1389,6 +1395,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout open_question
 layout project_list_item
 layout questionnaire_list_item
 layout select_dialog_item_material
@@ -1486,6 +1493,8 @@ string txtSearch
 string txtSex
 string txtShares
 string txtStartDate
+string txtSubmit
+string txtTitleQuestion
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

@@ -54,6 +54,7 @@ class QuestionnairesFragment : Fragment(), QuestionnairesAdapter.Listener {
 
     private fun initViews(view: View){
         rvQuestionnaires = view.findViewById(R.id.rvQuestionaires)
+        rvQuestionnaires.adapter = QuestionnairesAdapter(this)
         rvQuestionnaires.layoutManager = LinearLayoutManager(this.context)
     }
 
@@ -61,12 +62,9 @@ class QuestionnairesFragment : Fragment(), QuestionnairesAdapter.Listener {
         getRetrofit().getQuestionnaires(projectId+1)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
-            .subscribe(this::handleResponse)
-    }
-
-    private fun handleResponse(questionnaireList: List<Questionnaire>){
-        val questionnaires = ArrayList(questionnaireList)
-        rvQuestionnaires.adapter = QuestionnairesAdapter(questionnaires, this)
+            .subscribe({
+                (rvQuestionnaires.adapter as QuestionnairesAdapter).questionnairesList = ArrayList(it)
+            })
     }
 
     override fun onQuestionnaireSelected(questionnaireId: Int) {
