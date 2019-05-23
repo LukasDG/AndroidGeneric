@@ -8,16 +8,20 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.widget.FrameLayout
+import android.widget.ImageView
 import be.kdg.integratieproject.fragments.HomeFragment
 import be.kdg.integratieproject.fragments.LoginFragment
 import be.kdg.integratieproject.fragments.ProfileFragment
 import be.kdg.integratieproject.fragments.SearchFragment
+import com.squareup.picasso.Picasso
 
 const val PROJECT_ID: String = "PROJECT_ID"
 
 class MainActivity : AppCompatActivity(){
     private lateinit var navMenu: BottomNavigationView
     private lateinit var frameContainer: FrameLayout
+
+    private lateinit var ivTestImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +33,10 @@ class MainActivity : AppCompatActivity(){
         navMenu = findViewById(R.id.bottom_navigation)
         navMenu.setOnNavigationItemSelectedListener(initMenuListener())
         frameContainer = findViewById(R.id.fragment_container)
+
+        ivTestImage = findViewById(R.id.ivTest)
+        Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(ivTestImage)
+
         val homeFragment = HomeFragment.newInstance()
         openFragment(homeFragment)
     }

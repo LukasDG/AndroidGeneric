@@ -41,7 +41,7 @@ class ProjectsAdapter(
         projectViewHolder.tvProjectName.text = currentProject.name
         projectViewHolder.tvProjectLikes.text = currentProject.numberOfLikes.toString()
         projectViewHolder.tvProjectIdeations.text = currentProject.numberOfIdeations.toString()
-        Picasso.get().load("https://localhost:5001/api/ProjectImage/4").into(projectViewHolder.ivProjectImage)
+        Picasso.get().load("https://localhost:5001/api/ProjectImage/4.png").into(projectViewHolder.ivProjectImage)
         //projectViewHolder.ivProjectImage.setImageBitmap(currentProject.projectImage)
         //projectViewHolder.ivProjectImage.setImageResource(R.drawable.nature)
         projectViewHolder.ivProjectImage.setOnClickListener {
