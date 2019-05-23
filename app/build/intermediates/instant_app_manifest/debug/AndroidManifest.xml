@@ -21,11 +21,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name="be.kdg.integratieproject.ProfileActivity" >
-        </activity>
-        <activity android:name="be.kdg.integratieproject.SearchActivity" >
-        </activity>
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         <activity android:name="be.kdg.integratieproject.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +29,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="be.kdg.integratieproject.ProjectActivity" />
 
         <provider
             android:name="com.squareup.picasso.PicassoProvider"

@@ -1,12 +1,9 @@
 package be.kdg.integratieproject.rest
 
-import be.kdg.integratieproject.model.project.Project
-import be.kdg.integratieproject.model.project.ProjectBasic
-import be.kdg.integratieproject.model.project.Question
-import be.kdg.integratieproject.model.project.Questionnaire
+import be.kdg.integratieproject.model.project.*
 import io.reactivex.Observable
-import retrofit2.http.GET
-import retrofit2.http.Path
+import retrofit2.Call
+import retrofit2.http.*
 
 interface DataService {
     @GET("api/Projects")
@@ -20,6 +17,9 @@ interface DataService {
 
     @GET("api/Questions/{id}")
     fun getQuestions(@Path("id") id: Int): Observable<List<Question>>
+
+    @POST("api/SubmitQuestionnaire")
+    fun submitQuestionnaire(@Body model: ArrayList<QuestionAnswer>): Call<ArrayList<QuestionAnswer>>
 }
 
 
