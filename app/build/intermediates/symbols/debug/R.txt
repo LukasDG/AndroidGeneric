@@ -1081,7 +1081,7 @@ int id btnIdeations 0x7f090028
 int id btnLogin 0x7f090029
 int id btnQuestionnaires 0x7f09002a
 int id btnReg 0x7f09002b
-int id button 0x7f09002c
+int id btnSubmitQuestionnaire 0x7f09002c
 int id buttonPanel 0x7f09002d
 int id cancel_action 0x7f09002e
 int id center 0x7f09002f

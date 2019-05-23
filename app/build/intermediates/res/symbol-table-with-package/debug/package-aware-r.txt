@@ -1082,7 +1082,7 @@ id btnIdeations
 id btnLogin
 id btnQuestionnaires
 id btnReg
-id button
+id btnSubmitQuestionnaire
 id buttonPanel
 id cancel_action
 id center

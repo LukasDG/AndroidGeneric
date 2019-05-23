@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 
@@ -45,7 +46,7 @@ class QuestionnaireFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_questionnaire, container, false)
         initViews(view)
-        loadData()
+        loadData(view)
 
         return view
     }
@@ -64,16 +65,16 @@ class QuestionnaireFragment : Fragment() {
         btnSubmit = view.findViewById(R.id.btnSubmitQuestionnaire)
     }
 
-    private fun loadData(){
+    private fun loadData(view: View){
         getRetrofit().getQuestions(questionnaireId+1)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .subscribe({
-                initQuestionnaire(ArrayList(it))
+                initQuestionnaire(ArrayList(it), view)
             })
     }
 
-    fun initQuestionnaire(questions: ArrayList<Question>){
+    fun initQuestionnaire(questions: ArrayList<Question>, view: View){
         for (question in questions){
             val questionTitle = TextView(this.context)
             questionTitle.text = question.question
@@ -82,19 +83,44 @@ class QuestionnaireFragment : Fragment() {
             when {
                 question.questionType == 0 || question.questionType == 4 -> {
                     val editText = getEditText(this.requireContext())
+                    editText.id = question.id
                     llQuestionnaire.addView(editText)
                 }
                 question.questionType == 1 -> {
                     val radioGroup = getRadioGroup(this.requireContext(), question.options)
+                    radioGroup.id = question.id
                     llQuestionnaire.addView(radioGroup)
                 }
                 question.questionType == 2 -> {
                     val checkList = getCheckBoxes(this.requireContext(), question.options)
+                    checkList.id = question.id
                     llQuestionnaire.addView(checkList)
                 }
                 question.questionType == 3 -> {
                     val dropDownList = getDropDownList(this.requireContext(), question.options)
+                    dropDownList.id = question.id
                     llQuestionnaire.addView(dropDownList)
+                }
+            }
+        }
+
+        btnSubmit.setOnClickListener {
+            for (x in 0 until questions.size){
+                var answer = ""
+                when {
+                    questions[x].questionType == 0 || questions[x].questionType == 4 -> {
+                        val question = view.findViewById<EditText>(questions[x].id)
+                        answer = question.text.toString()
+                    }
+                    questions[x].questionType == 1 -> {
+
+                    }
+                    questions[x].questionType == 2 -> {
+
+                    }
+                    questions[x].questionType == 3 -> {
+
+                    }
                 }
             }
         }

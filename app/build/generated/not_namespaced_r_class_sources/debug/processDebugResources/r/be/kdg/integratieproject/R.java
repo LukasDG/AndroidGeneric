@@ -4729,7 +4729,7 @@ public final class R {
     public static final int btnLogin=0x7f090029;
     public static final int btnQuestionnaires=0x7f09002a;
     public static final int btnReg=0x7f09002b;
-    public static final int button=0x7f09002c;
+    public static final int btnSubmitQuestionnaire=0x7f09002c;
     public static final int buttonPanel=0x7f09002d;
     public static final int cancel_action=0x7f09002e;
     public static final int center=0x7f09002f;
