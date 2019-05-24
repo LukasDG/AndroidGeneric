@@ -3623,7 +3623,7 @@
         <item>@string/GenderM</item>
         <item>@string/GenderF</item>
         <item>@string/GenderX</item>
-    </string-array><string name="hello_blank_fragment">Hello blank fragment</string></file><file path="C:\Users\Lukas\Documents\GitHub\AndroidIntegratieProject\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </string-array><string name="hello_blank_fragment">Hello blank fragment</string><string name="txtSearch2">Search: </string></file><file path="C:\Users\Lukas\Documents\GitHub\AndroidIntegratieProject\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

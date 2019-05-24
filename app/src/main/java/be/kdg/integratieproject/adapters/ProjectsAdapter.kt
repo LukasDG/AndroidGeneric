@@ -3,6 +3,7 @@ package be.kdg.integratieproject.adapters
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.net.Uri
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -10,8 +11,13 @@ import android.view.ViewGroup
 import be.kdg.integratieproject.R
 import be.kdg.integratieproject.model.project.Project
 import be.kdg.integratieproject.model.project.ProjectBasic
+import be.kdg.integratieproject.rest.getRetrofit
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.project_list_item.view.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.io.File
 
 class ProjectsAdapter(
     private val listener: Listener
@@ -41,9 +47,28 @@ class ProjectsAdapter(
         projectViewHolder.tvProjectName.text = currentProject.name
         projectViewHolder.tvProjectLikes.text = currentProject.numberOfLikes.toString()
         projectViewHolder.tvProjectIdeations.text = currentProject.numberOfIdeations.toString()
-        Picasso.get().load("https://localhost:5001/api/ProjectImage/4.png").into(projectViewHolder.ivProjectImage)
-        //projectViewHolder.ivProjectImage.setImageBitmap(currentProject.projectImage)
-        //projectViewHolder.ivProjectImage.setImageResource(R.drawable.nature)
+        val url = "https://localhost:5001/api/ProjectImage/${currentProject.projectId}"
+        Picasso.get().load(url).into(projectViewHolder.ivProjectImage) //doesn't work but can't find why, the api works fine
+                                                                        //maybe problem with build gradle, had some problems there with mismatching versions
+        projectViewHolder.ivProjectImage.setImageResource(R.drawable.nature) // hardcoded image, should be deleted once picasso works
+
+        /*val call = getRetrofit().getProjectImage(currentProject.projectId)
+        call.enqueue(object: Callback<File>{
+            override fun onResponse(
+                call: Call<File>,
+                response: Response<File>
+            ) {
+                if (response.isSuccessful){
+                    projectViewHolder.ivProjectImage.setImageURI(Uri.fromFile(response.body()))
+                }
+            }
+
+            override fun onFailure(call: Call<File>, t: Throwable) {
+                //projectViewHolder.ivProjectImage.setImageResource(R.drawable.nature)
+            }
+        })*/
+        // doesn't work with retrofit either
+
         projectViewHolder.ivProjectImage.setOnClickListener {
             listener.onProjectSelected(position)
         }

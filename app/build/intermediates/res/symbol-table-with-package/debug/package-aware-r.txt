@@ -1159,7 +1159,6 @@ id ivFillInImage
 id ivLikes
 id ivProjectImage
 id ivShare
-id ivTest
 id labeled
 id largeLabel
 id left
@@ -1168,6 +1167,7 @@ id line3
 id listMode
 id list_item
 id llQuestionnaire
+id llQuestionnaires
 id masked
 id media_actions
 id message
@@ -1194,6 +1194,7 @@ id pin
 id progressBar
 id progress_circular
 id progress_horizontal
+id projectProgressBar
 id radio
 id right
 id right_icon
@@ -1259,6 +1260,7 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView8
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1491,6 +1493,7 @@ string txtQuestionnaires
 string txtQuestions
 string txtRegister
 string txtSearch
+string txtSearch2
 string txtSex
 string txtShares
 string txtStartDate

@@ -21,8 +21,6 @@ class MainActivity : AppCompatActivity(){
     private lateinit var navMenu: BottomNavigationView
     private lateinit var frameContainer: FrameLayout
 
-    private lateinit var ivTestImage: ImageView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,9 +31,6 @@ class MainActivity : AppCompatActivity(){
         navMenu = findViewById(R.id.bottom_navigation)
         navMenu.setOnNavigationItemSelectedListener(initMenuListener())
         frameContainer = findViewById(R.id.fragment_container)
-
-        ivTestImage = findViewById(R.id.ivTest)
-        Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(ivTestImage)
 
         val homeFragment = HomeFragment.newInstance()
         openFragment(homeFragment)

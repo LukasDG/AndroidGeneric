@@ -1,5 +1,6 @@
 package be.kdg.integratieproject.fragments
 
+import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -8,13 +9,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import be.kdg.integratieproject.R
 import be.kdg.integratieproject.model.project.Project
 import be.kdg.integratieproject.model.project.Questionnaire
 import be.kdg.integratieproject.rest.getRetrofit
+import com.squareup.picasso.Picasso
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -30,6 +38,8 @@ class ProjectFragment : Fragment(){
     private lateinit var endDate: TextView
     private lateinit var btnQuestionnaires: Button
     private lateinit var btnIdeations: Button
+    private lateinit var ivProjectImage: ImageView
+    private lateinit var pbProjectProgress: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +75,13 @@ class ProjectFragment : Fragment(){
         endDate = view.findViewById(R.id.tvEndDate)
         btnIdeations = view.findViewById(R.id.btnIdeations)
         btnQuestionnaires = view.findViewById(R.id.btnQuestionnaires)
+        ivProjectImage = view.findViewById(R.id.ivProjectImage)
+        pbProjectProgress = view.findViewById(R.id.projectProgressBar)
+
+        val url = "https://localhost:5001/api/ProjectImage/$projectId"
+        Picasso.get().load(url).into(ivProjectImage) //doesn't work either
+
+        ivProjectImage.setImageResource(R.drawable.nature) // should be deleted once picasso works
 
         btnQuestionnaires.setOnClickListener {
             val questionnaireFragment = QuestionnairesFragment.newInstance(projectId)
@@ -90,6 +107,7 @@ class ProjectFragment : Fragment(){
         projectDescription.text = project.description
         startDate.text = dateFormatter.format(project.startDate)
         endDate.text = dateFormatter.format(project.endDate)
+        pbProjectProgress.progress = project.percentageCompleted
     }
 
     private fun switchFragment(fragment: Fragment){

@@ -4,10 +4,10 @@
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
                                              android:layout_height="wrap_content"
-                                             android:layout_marginBottom="0dp"
-                                             android:layout_marginTop="10dp"
+                                             android:layout_marginBottom="5dp"
+                                             android:layout_marginTop="5dp"
                                              android:background="#ffffff"
-                                             android:paddingBottom="10dp"
+                                             android:paddingBottom="5dp"
 >
     <ImageView
             android:scaleType="fitXY"
@@ -17,7 +17,7 @@
             android:id="@+id/ivProjectImage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="0dp"
             app:layout_constraintTop_toTopOf="parent"/>
     <TextView
             android:text="@string/txtProjectName"

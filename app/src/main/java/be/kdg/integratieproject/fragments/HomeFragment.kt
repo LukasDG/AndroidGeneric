@@ -1,5 +1,6 @@
 package be.kdg.integratieproject.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -25,6 +26,7 @@ class HomeFragment : Fragment(), ProjectsAdapter.Listener{
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
+        view.setBackgroundColor(Color.parseColor("#e0e0e0"))
         initViews(view)
         loadData()
 
