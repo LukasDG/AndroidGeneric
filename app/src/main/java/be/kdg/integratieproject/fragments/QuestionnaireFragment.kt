@@ -125,17 +125,14 @@ class QuestionnaireFragment : Fragment() {
                         val selectedButtonId = radioGroup.checkedRadioButtonId
                         val radioButton = view.findViewById<RadioButton>(selectedButtonId)
                         if (radioButton != null) answer = radioButton.text.toString()
-                        println(answer)
                     }
                     questions[x].questionType == 2 -> {
                         val linearLayout = view.findViewById<LinearLayout>(questions[x].viewId)
                         answer = getCheckBoxAnswers(linearLayout)
-                        println(answer)
                     }
                     questions[x].questionType == 3 -> {
                         val spinner = view.findViewById<Spinner>(questions[x].viewId)
                         answer = spinner.selectedItem.toString()
-                        println(answer)
                     }
                 }
 
@@ -153,6 +150,7 @@ class QuestionnaireFragment : Fragment() {
                     if (response.isSuccessful){
                         //val createdAnswers = response.body()
                         Toast.makeText(context, "Submitted succesfully", Toast.LENGTH_SHORT).show()
+                        activity?.supportFragmentManager?.popBackStack()
 
 
                     }else{
