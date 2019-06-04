@@ -55,6 +55,7 @@ class ProjectFragment : Fragment(){
         val view = inflater.inflate(R.layout.fragment_project, container, false)
         loadData()
         initViews(view)
+        activity?.title = "Project details"
 
         return view
     }

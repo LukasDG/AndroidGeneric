@@ -15,6 +15,7 @@ class SearchFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        activity?.title = "Search"
         return inflater.inflate(R.layout.fragment_search, container, false)
     }
 

@@ -47,6 +47,7 @@ class QuestionnaireFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_questionnaire, container, false)
         initViews(view)
         loadData(view)
+        activity?.title = "Questionnaire"
 
         return view
     }
@@ -67,7 +68,7 @@ class QuestionnaireFragment : Fragment() {
     }
 
     private fun loadData(view: View){
-        getRetrofit().getQuestions(questionnaireId+1)
+        getRetrofit().getQuestions(questionnaireId)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .subscribe({

@@ -16,7 +16,8 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
-        initViews(view)
+        initViews(/*view*/)
+        activity?.title = "Profile"
 
         return view
     }
@@ -26,7 +27,7 @@ class ProfileFragment : Fragment() {
             ProfileFragment()
     }
 
-    private fun initViews(view: View){
+    private fun initViews(/*view: View*/){
 
     }
 }

@@ -42,6 +42,7 @@ class QuestionnairesFragment : Fragment(), QuestionnairesAdapter.Listener {
         val view = inflater.inflate(R.layout.fragment_questionnaires, container, false)
         initViews(view)
         loadData()
+        activity?.title = "Questionnaires"
 
         return view
     }

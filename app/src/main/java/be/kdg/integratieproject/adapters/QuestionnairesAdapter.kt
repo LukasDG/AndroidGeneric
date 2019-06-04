@@ -33,18 +33,19 @@ class QuestionnairesAdapter(
     override fun getItemCount() = questionnairesList.size
 
     override fun onBindViewHolder(questionnaireViewHolder: QuestionnaireViewHolder, position: Int) {
-        val currentProject = questionnairesList[position]
+        val currentQuestionnaire = questionnairesList[position]
 
-        questionnaireViewHolder.tvQuestionnaireName.text = currentProject.name
+        questionnaireViewHolder.tvQuestionnaireName.text = currentQuestionnaire.name
 
         questionnaireViewHolder.ivFillInImage.setOnClickListener {
-            listener.onQuestionnaireSelected(position)
+            listener.onQuestionnaireSelected(currentQuestionnaire.questionnaireId)
         }
         questionnaireViewHolder.tvFillIn.setOnClickListener {
-            listener.onQuestionnaireSelected(position)
+            println(currentQuestionnaire.questionnaireId)
+            listener.onQuestionnaireSelected(currentQuestionnaire.questionnaireId)
         }
         questionnaireViewHolder.tvQuestionnaireName.setOnClickListener {
-            listener.onQuestionnaireSelected(position)
+            listener.onQuestionnaireSelected(currentQuestionnaire.questionnaireId)
         }
     }
 

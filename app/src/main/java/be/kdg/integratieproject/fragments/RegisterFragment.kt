@@ -16,7 +16,8 @@ class RegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_register, container, false)
-        initViews(view)
+        initViews(/*view*/)
+        activity?.title = "Register"
 
         return view
     }
@@ -26,7 +27,7 @@ class RegisterFragment : Fragment() {
             RegisterFragment()
     }
 
-    private fun initViews(view: View){
+    private fun initViews(/*view: View*/){
 
     }
 

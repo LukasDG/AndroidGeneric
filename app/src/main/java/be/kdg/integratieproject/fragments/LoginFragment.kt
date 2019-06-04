@@ -24,6 +24,7 @@ class LoginFragment : Fragment() {
     ): View? {
         val view =  inflater.inflate(R.layout.fragment_login, container, false)
         initViews(view)
+        activity?.title = "Login"
 
         return  view
     }
