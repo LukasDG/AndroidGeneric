@@ -17,7 +17,9 @@ class IdeationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_ideation, container, false)
+        val view =  inflater.inflate(R.layout.fragment_ideation, container, false)
+
+        return view
     }
 
     companion object {
@@ -27,6 +29,10 @@ class IdeationFragment : Fragment() {
                     putInt(PROJECT_ID, projectId)
                 }
             }
+    }
+
+    private fun initViews(){
+
     }
 
 }
