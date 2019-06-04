@@ -151,8 +151,6 @@ class QuestionnaireFragment : Fragment() {
                         //val createdAnswers = response.body()
                         Toast.makeText(context, "Submitted succesfully", Toast.LENGTH_SHORT).show()
                         activity?.supportFragmentManager?.popBackStack()
-
-
                     }else{
                         Toast.makeText(context, "Something went wrong, please try again later", Toast.LENGTH_LONG).show()
                     }

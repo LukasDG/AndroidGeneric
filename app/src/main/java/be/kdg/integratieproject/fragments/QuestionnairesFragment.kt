@@ -64,7 +64,7 @@ class QuestionnairesFragment : Fragment(), QuestionnairesAdapter.Listener {
     }
 
     private fun loadData(){
-        getRetrofit().getQuestionnaires(projectId+1)
+        getRetrofit().getQuestionnaires(projectId)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .subscribe({
