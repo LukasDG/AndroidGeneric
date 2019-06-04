@@ -27,6 +27,8 @@ class ProjectsAdapter(
         val ivProjectImage = view.ivProjectImage
         val tvProjectLikes = view.tvLikes
         val tvProjectIdeations = view.tvIdeations
+        val ivIdeationIcon = view.ivIdeations
+        val tvIdeations = view.tvIdeations
     }
 
     var projectList: ArrayList<ProjectBasic> = arrayListOf()
@@ -70,14 +72,21 @@ class ProjectsAdapter(
         // doesn't work with retrofit either
 
         projectViewHolder.ivProjectImage.setOnClickListener {
-            listener.onProjectSelected(position)
+            listener.onProjectSelected(currentProject.projectId)
         }
         projectViewHolder.tvProjectName.setOnClickListener {
-            listener.onProjectSelected(position)
+            listener.onProjectSelected(currentProject.projectId)
+        }
+        projectViewHolder.ivIdeationIcon.setOnClickListener {
+            listener.onIdeationsSelected(currentProject.projectId)
+        }
+        projectViewHolder.tvIdeations.setOnClickListener {
+            listener.onIdeationsSelected(currentProject.projectId)
         }
     }
 
     interface Listener {
         fun onProjectSelected(projectId: Int)
+        fun onIdeationsSelected(projectId: Int)
     }
 }

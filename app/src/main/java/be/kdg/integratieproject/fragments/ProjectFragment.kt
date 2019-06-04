@@ -97,7 +97,7 @@ class ProjectFragment : Fragment(){
 
 
     private fun loadData(){
-        getRetrofit().getProjectById(projectId+1)
+        getRetrofit().getProjectById(projectId)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .subscribe(this::handleResponse)

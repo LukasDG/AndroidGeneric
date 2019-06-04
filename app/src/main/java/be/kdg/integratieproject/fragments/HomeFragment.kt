@@ -57,8 +57,17 @@ class HomeFragment : Fragment(), ProjectsAdapter.Listener{
 
     override fun onProjectSelected(projectId: Int) {
         val projectFragment = ProjectFragment.newInstance(projectId)
+        changeFragment(projectFragment)
+    }
+
+    override fun onIdeationsSelected(projectId: Int) {
+        val ideationFragment = IdeationFragment.newInstance(projectId)
+        changeFragment(ideationFragment)
+    }
+
+    private fun changeFragment(fragment: Fragment){
         val transaction = activity?.supportFragmentManager?.beginTransaction()
-        transaction?.replace(R.id.fragment_container, projectFragment)
+        transaction?.replace(R.id.fragment_container, fragment)
         transaction?.addToBackStack(null)
         transaction?.commit()
     }
