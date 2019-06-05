@@ -44,6 +44,8 @@ class HomeFragment : Fragment(), ProjectsAdapter.Listener{
         rvProjects = view.rvProjects
         rvProjects.adapter = ProjectsAdapter(this, this.context!!)
         rvProjects.layoutManager = LinearLayoutManager(this.context)
+        rvProjects.setHasFixedSize(true)
+        rvProjects.setItemViewCacheSize(20)
     }
 
     private fun loadData(){

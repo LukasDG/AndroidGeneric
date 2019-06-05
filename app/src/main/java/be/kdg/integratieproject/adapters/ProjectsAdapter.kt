@@ -51,9 +51,9 @@ class ProjectsAdapter(
         projectViewHolder.tvProjectLikes.text = currentProject.numberOfLikes.toString()
         projectViewHolder.tvProjectIdeations.text = currentProject.numberOfIdeations.toString()
         val url = "https://localhost:5001/api/ProjectImage/${currentProject.projectId}"
-        Picasso.get().load(url).into(projectViewHolder.ivProjectImage) //doesn't work but can't find why, the api works fine
+        //Picasso.get().load(url).into(projectViewHolder.ivProjectImage) //doesn't work but can't find why, the api works fine
                                                                         //maybe problem with build gradle, had some problems there with mismatching versions
-        //projectViewHolder.ivProjectImage.setImageResource(R.drawable.nature) // hardcoded image, should be deleted once picasso works
+        //projectViewHolder.ivProjectImage.setImageResource(R.drawable.project1) // hardcoded image, should be deleted once picasso works
 
         val id = context.resources.getIdentifier("project"+currentProject.projectId, "drawable", context.packageName)
         projectViewHolder.ivProjectImage.setImageResource(id)
