@@ -5,27 +5,41 @@
              android:layout_height="match_parent"
              tools:context=".fragments.QuestionnaireFragment">
 
-    <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
-                                                 android:layout_height="match_parent">
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:id="@+id/llQuestionnaire"
-                      android:orientation="vertical"
-                      android:layout_marginTop="8dp"
-                      app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                      android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
-                      android:layout_marginStart="8dp"/>
-        <Button
-                android:text="@string/txtSubmit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/btnSubmitQuestionnaire"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/llQuestionnaire" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="8dp"/>
+
+
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:id="@+id/scrollView2" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp"
+                    android:paddingBottom="16dp">
+            <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                                                         android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/llQuestionnaire"
+                              android:orientation="vertical"
+                              android:layout_marginTop="0dp"
+                              app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                              android:layout_marginEnd="0dp" app:layout_constraintStart_toStartOf="parent"
+                              android:layout_marginStart="0dp"/>
+
+                <Button
+                        android:text="@string/txtSubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/btnSubmitQuestionnaire"
+                        app:layout_constraintTop_toBottomOf="@+id/llQuestionnaire" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="16dp"/>
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
 
 
 
 
-    </android.support.constraint.ConstraintLayout>
+
+
+
+
 </FrameLayout>
