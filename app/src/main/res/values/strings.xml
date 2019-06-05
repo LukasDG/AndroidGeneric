@@ -26,6 +26,8 @@
     <string name="txtPlace">Place:</string>
     <string name="txtSex">Sex:</string>
     <string name="txtTitleQuestion">Question title</string>
+    <string name="txtIdeationTitle">Ideation title</string>
+    <string name="txtShowIdeas"><u>Show Ideas</u></string>
     <string name="txtSubmit">Submit</string>
     <string name="txtNoAccountYet">
         <u>No account yet?</u>

@@ -41,7 +41,6 @@ class QuestionnairesAdapter(
             listener.onQuestionnaireSelected(currentQuestionnaire.questionnaireId)
         }
         questionnaireViewHolder.tvFillIn.setOnClickListener {
-            println(currentQuestionnaire.questionnaireId)
             listener.onQuestionnaireSelected(currentQuestionnaire.questionnaireId)
         }
         questionnaireViewHolder.tvQuestionnaireName.setOnClickListener {

@@ -1133,6 +1133,7 @@ id fixed
 id forever
 id fragment_container
 id ghost_view
+id glIdeations
 id gone
 id group_divider
 id groups
@@ -1158,6 +1159,8 @@ id invisible
 id italic
 id item_touch_helper_previous_elevation
 id ivFillInImage
+id ivIdeationComments
+id ivIdeationLikes
 id ivIdeations
 id ivLikes
 id ivProjectImage
@@ -1169,6 +1172,7 @@ id line1
 id line3
 id listMode
 id list_item
+id llIdeations
 id llQuestionnaire
 id llQuestionnaires
 id masked
@@ -1202,6 +1206,7 @@ id radio
 id right
 id right_icon
 id right_side
+id rvIdeations
 id rvProjects
 id rvQuestionaires
 id save_image_matrix
@@ -1286,6 +1291,9 @@ id tvEmailReg
 id tvEndDate
 id tvFillIn
 id tvFirstNameReg
+id tvIdeationComments
+id tvIdeationLikes
+id tvIdeationTitle
 id tvIdeations
 id tvLastNameReg
 id tvLikes
@@ -1301,6 +1309,7 @@ id tvQuestionTitle
 id tvQuestionnaireName
 id tvSex
 id tvShares
+id tvShowIdeas
 id tvStartdate
 id tvTitleProgress
 id uniform
@@ -1385,6 +1394,7 @@ layout fragment_questionnaire
 layout fragment_questionnaires
 layout fragment_register
 layout fragment_search
+layout ideation_list_item
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1480,6 +1490,7 @@ string txtFillIn
 string txtFirstName
 string txtHome
 string txtIdeas
+string txtIdeationTitle
 string txtIdeations
 string txtLastName
 string txtLikes
@@ -1500,6 +1511,7 @@ string txtSearch
 string txtSearch2
 string txtSex
 string txtShares
+string txtShowIdeas
 string txtStartDate
 string txtSubmit
 string txtTitleQuestion

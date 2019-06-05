@@ -90,7 +90,8 @@ class ProjectFragment : Fragment(){
         }
 
         btnIdeations.setOnClickListener {
-
+            val ideationFragment = IdeationFragment.newInstance(projectId)
+            switchFragment(ideationFragment)
         }
     }
 

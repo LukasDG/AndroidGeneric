@@ -440,6 +440,10 @@
         "source": "C:\\Users\\lukas\\.gradle\\caches\\transforms-2\\files-2.1\\78a1c206c462f4887710cf0a24b80598\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\lukas\\Documents\\GitHub\\AndroidV2\\app\\build\\intermediates\\res\\merged\\debug\\layout_ideation_list_item.xml.flat",
+        "source": "C:\\Users\\lukas\\Documents\\GitHub\\AndroidV2\\app\\src\\main\\res\\layout\\ideation_list_item.xml"
+    },
+    {
         "merged": "C:\\Users\\lukas\\Documents\\GitHub\\AndroidV2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_ab_back_material.xml.flat",
         "source": "C:\\Users\\lukas\\.gradle\\caches\\transforms-2\\files-2.1\\78a1c206c462f4887710cf0a24b80598\\res\\drawable\\abc_ic_ab_back_material.xml"
     },

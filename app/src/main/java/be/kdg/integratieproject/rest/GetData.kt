@@ -1,5 +1,6 @@
 package be.kdg.integratieproject.rest
 
+import be.kdg.integratieproject.model.ideation.Ideation
 import be.kdg.integratieproject.model.project.*
 import io.reactivex.Observable
 import retrofit2.Call
@@ -25,6 +26,9 @@ interface DataService {
 
     @POST("api/SubmitQuestionnaire")
     fun submitQuestionnaire(@Body model: ArrayList<QuestionAnswer>): Call<ArrayList<QuestionAnswer>>
+
+    @GET("api/Ideations/{id}")
+    fun getIdeations(@Path("id") id: Int): Observable<List<Ideation>>
 }
 
 
