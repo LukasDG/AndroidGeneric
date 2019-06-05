@@ -42,7 +42,7 @@ class HomeFragment : Fragment(), ProjectsAdapter.Listener{
 
     private fun initViews(view: View){
         rvProjects = view.rvProjects
-        rvProjects.adapter = ProjectsAdapter(this)
+        rvProjects.adapter = ProjectsAdapter(this, this.context!!)
         rvProjects.layoutManager = LinearLayoutManager(this.context)
     }
 

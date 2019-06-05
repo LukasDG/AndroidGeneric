@@ -20,7 +20,8 @@ import retrofit2.Response
 import java.io.File
 
 class ProjectsAdapter(
-    private val listener: Listener
+    private val listener: Listener,
+    private val context: Context
 ) : RecyclerView.Adapter<ProjectsAdapter.ProjectViewHolder>(){
     class ProjectViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val tvProjectName = view.tvProjectName
@@ -52,7 +53,10 @@ class ProjectsAdapter(
         val url = "https://localhost:5001/api/ProjectImage/${currentProject.projectId}"
         Picasso.get().load(url).into(projectViewHolder.ivProjectImage) //doesn't work but can't find why, the api works fine
                                                                         //maybe problem with build gradle, had some problems there with mismatching versions
-        projectViewHolder.ivProjectImage.setImageResource(R.drawable.nature) // hardcoded image, should be deleted once picasso works
+        //projectViewHolder.ivProjectImage.setImageResource(R.drawable.nature) // hardcoded image, should be deleted once picasso works
+
+        val id = context.resources.getIdentifier("project"+currentProject.projectId, "drawable", context.packageName)
+        projectViewHolder.ivProjectImage.setImageResource(id)
 
         /*val call = getRetrofit().getProjectImage(currentProject.projectId)
         call.enqueue(object: Callback<File>{

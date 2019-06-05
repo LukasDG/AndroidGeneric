@@ -82,7 +82,9 @@ class ProjectFragment : Fragment(){
         val url = "https://localhost:5001/api/ProjectImage/$projectId"
         Picasso.get().load(url).into(ivProjectImage) //doesn't work either
 
-        ivProjectImage.setImageResource(R.drawable.nature) // should be deleted once picasso works
+        //ivProjectImage.setImageResource(R.drawable.nature) // should be deleted once picasso works
+        val id = resources.getIdentifier("project"+projectId, "drawable", context!!.packageName)
+        ivProjectImage.setImageResource(id)
 
         btnQuestionnaires.setOnClickListener {
             val questionnaireFragment = QuestionnairesFragment.newInstance(projectId)

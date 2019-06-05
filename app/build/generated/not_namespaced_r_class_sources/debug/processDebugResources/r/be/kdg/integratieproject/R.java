@@ -4682,10 +4682,25 @@ public final class R {
     public static final int notification_tile_bg=0x7f08007d;
     public static final int notify_panel_notification_icon_bg=0x7f08007e;
     public static final int profile_icon=0x7f08007f;
-    public static final int search_icon=0x7f080080;
-    public static final int share=0x7f080081;
-    public static final int tooltip_frame_dark=0x7f080082;
-    public static final int tooltip_frame_light=0x7f080083;
+    public static final int project1=0x7f080080;
+    public static final int project10=0x7f080081;
+    public static final int project11=0x7f080082;
+    public static final int project12=0x7f080083;
+    public static final int project13=0x7f080084;
+    public static final int project14=0x7f080085;
+    public static final int project15=0x7f080086;
+    public static final int project2=0x7f080087;
+    public static final int project3=0x7f080088;
+    public static final int project4=0x7f080089;
+    public static final int project5=0x7f08008a;
+    public static final int project6=0x7f08008b;
+    public static final int project7=0x7f08008c;
+    public static final int project8=0x7f08008d;
+    public static final int project9=0x7f08008e;
+    public static final int search_icon=0x7f08008f;
+    public static final int share=0x7f080090;
+    public static final int tooltip_frame_dark=0x7f080091;
+    public static final int tooltip_frame_light=0x7f080092;
   }
   public static final class id {
     public static final int ALT=0x7f090000;
